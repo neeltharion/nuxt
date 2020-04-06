@@ -1,4 +1,4 @@
 
 export default function ({$axios}) {
-  $axios.setHeader('Authorization', '456')
+  $axios.setHeader('Authorization', 456)
 }

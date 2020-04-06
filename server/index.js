@@ -7,9 +7,17 @@ const app = express()
 const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
 
-app.get('/test', (req, res) => {
+const authChecker = (req,res,next) => {
+          if(req.header.Authorization == 455) next()
+          else console.log('AUTH FAILED');
+
+}
+
+app.get('/test', authChecker, (req, res) => {
        res.json({msg:'asd'});
 });
+
+
 async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)

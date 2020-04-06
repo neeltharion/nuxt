@@ -8,10 +8,7 @@
         <BlackButton @clicked="log"> TEST </BlackButton>
         <h1 class="h3 text-center"> {{hellow}}</h1>
         <hr>
-<small>This site is protected by reCAPTCHA and the Google
-    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-    <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-</small>
+
   </div>
 </template>
 
