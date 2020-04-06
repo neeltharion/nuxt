@@ -8,6 +8,7 @@ const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
 
 const authChecker = (req,res,next) => {
+          console.log(req.header.Authorization)
           if(req.header.Authorization == 455) next()
           else console.log('AUTH FAILED');
 
