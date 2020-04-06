@@ -9,7 +9,8 @@ config.dev = process.env.NODE_ENV !== 'production'
 
 const authChecker = (req,res,next) => {
 
-          if(req.headers.authorization == 455) next()
+          if(req.headers.authorization == 455) { console.log('TOKEN ACCEPTABLE');
+          ;next()}
           else console.log('AUTH FAILED');
 
 }
