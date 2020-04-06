@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/recaptcha": "^0.6.2",
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0",
     "consola": "^2.11.3",

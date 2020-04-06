@@ -9,7 +9,7 @@ export const getters = {
 
 export const actions = {
 
-  async nuxtServerInit(vuexContext, context) {
+  async nuxtServerInit({commit}, context) {
 
 
 

@@ -1,5 +1,6 @@
 
 module.exports = {
+
   mode: 'universal',
   /*
   ** Headers of the page
@@ -31,7 +32,8 @@ module.exports = {
   */
   plugins: [
       '~plugins/corePlugins.js',
-      '~plugins/toUpper.js'
+      '~plugins/toUpper.js',
+      '~plugins/interceptor.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,7 +48,6 @@ module.exports = {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios', "nuxt-compress"
-
   ],
   /*
   ** Axios module configuration
@@ -56,7 +57,8 @@ module.exports = {
 
   },
   router: {
-    prefetchLinks: true
+    prefetchLinks: true,
+    middleware: 'authChecker'
   },
   /*
   ** Build configuration
